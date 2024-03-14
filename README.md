@@ -3,7 +3,7 @@ CSCI 4145 Cloud Computing term project, build a web app and configure the infras
 
 - Author: Jenna Cogswell | [GitHub](https://github.com/JennaCogswell) | [Dalhousie Email](jenna.c@dal.ca) | [Personal Email](cogswejg@gmail.com) | [LinkedIn](https://www.linkedin.com/in/jenna-cogswell-1608771b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKTse20oGQmewcrgqOPIstw%3D%3D) 
 - Start date: 2024-03-13
-- Last modification date: 2024-03-13
+- Last modification date: 2024-03-14
 
 ## Description of the web application
 
@@ -11,7 +11,7 @@ A full-stack web application for users to **create, share, and explore short sto
 This application was inspired by similar ones such as *Wattpad.* 
 
 ## Languages used
-- JavaScript
+- JavaScript (+jsx)
 - HTML
 - CSS (with Tailwind)
 
@@ -19,7 +19,7 @@ This application was inspired by similar ones such as *Wattpad.*
 
 - React.js
 - Node.js
-- Express.js
+- Next.js
 - Postgres
 
 ## AWS services used
@@ -56,22 +56,42 @@ This application was inspired by similar ones such as *Wattpad.*
 
 **********************************************************************************************************
 
-### Steps to setup frontend/backend of application:
+### Steps to setup application:
 1. Plan out website concept, design, tech stack, cloud infrastructure
-1. Create Git repository and clone locally
-1. Create a project folder
-1. Create a React app for the front end
-1. Create a Node.js server for the backend, with Express.js for API routing
+2. Create Git repository and clone locally
+3. Create a project folder
+4. Create a React Next app for the front end (npx create-next-app name)
+5. npm i install next-auth
+6. npm run dev
+7. npm run build
+8. Modify package.json to tell Elastic beanstalk how to run the app
+```
+"scripts": {
+  "dev": "next dev",     
+  "build": "next build",     
+  "start": "next start -p $PORT"  
+}
+```
+9. zip the .next folder, package.json, and any public or static folders, to be added to AWS
+<!--1. Create a Node.js server for the backend, with Express.js for API routing 
 1. Install and configure Axios on React app to connect to backend
 1. Install and configure cors, express-validator, and dotenv on server
 1. Run "node app.js" in server folder to run server
 1. Run "npm run build" on client to build app front end
 1. Add build folder path to server constructor
 1. Set up catch for any unknown routes
-1. Now it is all set for production
+1. Now it is all set for production -->
 *****************************************************************************************************************
 ### Steps to setup AWS infrastructure:
-- 
+
+#### Elastic Beanstalk
+1. Elastic Beanstalk > create new application > enter a name and hit create
+2. Configure environment > web server environmnet > leave platform as node.js > application code > upload code
+3. Configure service access > create key-pair
+4. setup VPC configuration and security rules
+5. setup database connection (?)
+6. Add environment variables
+7. leave rest as default > test domain link
 
 ******************************************************************************************************************
 ### Frontend component and styling choices:
@@ -81,4 +101,6 @@ This application was inspired by similar ones such as *Wattpad.*
 1. [md syntax](https://www.markdownguide.org/basic-syntax/)
 2. [git branch naming](https://phoenixnap.com/kb/git-branch-name-convention)
 3. [React app and node.js server setup](https://dev.to/techcheck/creating-a-react-node-and-express-app-1ieg)
+4. [Next js app in Elastic Beanstalk](https://hanancs.medium.com/deploy-next-js-app-on-elastic-beanstalk-d4add3fb5453)
+5. [Next auth with email and password](https://www.youtube.com/watch?v=v6TPcU23wP8)
 
