@@ -1,11 +1,41 @@
-# CloudComputingProject
+# The Grapevine Chronicles - A web app hosted in AWS
 CSCI 4145 Cloud Computing term project, build a web app and configure the infrastructure through AWS academy.
 
+- Author: Jenna Cogswell | [GitHub](https://github.com/JennaCogswell) | [Dalhousie Email](jenna.c@dal.ca) | [Personal Email](cogswejg@gmail.com) | [LinkedIn](https://www.linkedin.com/in/jenna-cogswell-1608771b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKTse20oGQmewcrgqOPIstw%3D%3D) 
+- Start date: 2024-03-13
+- Last modification date: 2024-03-13
+
 ## Description of the web application
-A web application for users to **create, share, and explore short stories and blog posts,** created by themselves and other users. 
+
+A full-stack web application for users to **create, share, and explore short stories and blog posts,** created by themselves and other users. Deployed in AWS Academy using Elastic Beanstalk. 
 This application was inspired by similar ones such as *Wattpad.* 
 
+## Languages used
+- JavaScript
+- HTML
+- CSS (with Tailwind)
+
+## Tech stack
+
+- React.js
+- Node.js
+- Express.js
+- Postgres
+
+## AWS services used
+
+- EC2
+- Elastic Beanstalk
+- S3
+- RDS - Postgres
+- VPC
+- Elastic load balancing
+- (Amazon Polly?)
+
+****************************************************************************************************
+
 ### The initial necessary features involve: 
+
 - User registration
 - Login/logging off and sessions
 - Create a short story or blog by filling in a title, optional cover image, a short description, and the story/blog text contents
@@ -15,6 +45,7 @@ This application was inspired by similar ones such as *Wattpad.*
 - Be able to delete stories/blogs
 
 #### Additional features to be added if time permits:
+
 - Use Amazon Polly to create an audiobook/text-to-speech feature
 - Searching through posts by title/author/descriptions
 - Allow users to follow others and create a following page
@@ -23,19 +54,31 @@ This application was inspired by similar ones such as *Wattpad.*
 - Allow users to edit and personalize their profiles including avatars and a bio
 - Allow users to add images inline
 
+**********************************************************************************************************
 
-## AWS services used
-- EC2
-- Elastic Beanstalk
-- S3
-- RDS - Postgres
-- VPC
-- Elastic load balancing
-- (Amazon Polly?)
+### Steps to setup frontend/backend of application:
+1. Plan out website concept, design, tech stack, cloud infrastructure
+1. Create Git repository and clone locally
+1. Create a project folder
+1. Create a React app for the front end
+1. Create a Node.js server for the backend, with Express.js for API routing
+1. Install and configure Axios on React app to connect to backend
+1. Install and configure cors, express-validator, and dotenv on server
+1. Run "node app.js" in server folder to run server
+1. Run "npm run build" on client to build app front end
+1. Add build folder path to server constructor
+1. Set up catch for any unknown routes
+1. Now it is all set for production
+*****************************************************************************************************************
+### Steps to setup AWS infrastructure:
+- 
 
+******************************************************************************************************************
+### Frontend component and styling choices:
+- 
 
-### Steps to build:
-
-
-## Resources used
+## Resources
+1. [md syntax](https://www.markdownguide.org/basic-syntax/)
+2. [git branch naming](https://phoenixnap.com/kb/git-branch-name-convention)
+3. [React app and node.js server setup](https://dev.to/techcheck/creating-a-react-node-and-express-app-1ieg)
 
