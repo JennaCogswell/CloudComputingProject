@@ -3,7 +3,7 @@ CSCI 4145 Cloud Computing term project, build a web app and configure the infras
 
 - Author: Jenna Cogswell | [GitHub](https://github.com/JennaCogswell) | [Dalhousie Email](jenna.c@dal.ca) | [Personal Email](cogswejg@gmail.com) | [LinkedIn](https://www.linkedin.com/in/jenna-cogswell-1608771b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKTse20oGQmewcrgqOPIstw%3D%3D) 
 - Start date: 2024-03-13
-- Last modification date: 2024-03-14
+- Last modification date: 2024-03-18
 
 ## Description of the web application
 
@@ -24,12 +24,12 @@ This application was inspired by similar ones such as *Wattpad.*
 
 ## AWS services used
 
-- EC2
 - Elastic Beanstalk
+    - EC2
+    - Elastic Load Balancing
 - S3
 - RDS - Postgres
 - VPC
-- Elastic load balancing
 - (Amazon Polly?)
 
 ****************************************************************************************************
@@ -73,7 +73,8 @@ This application was inspired by similar ones such as *Wattpad.*
 }
 ```
 9. zip the .next folder, package.json, and any public or static folders, to be added to AWS
-<!--1. Create a Node.js server for the backend, with Express.js for API routing 
+<!-- steps if using a node server directly without next js:
+1. Create a Node.js server for the backend, with Express.js for API routing 
 1. Install and configure Axios on React app to connect to backend
 1. Install and configure cors, express-validator, and dotenv on server
 1. Run "node app.js" in server folder to run server
@@ -83,6 +84,15 @@ This application was inspired by similar ones such as *Wattpad.*
 1. Now it is all set for production -->
 *****************************************************************************************************************
 ### Steps to setup AWS infrastructure:
+
+#### Virtual Private Cloud
+1. 
+
+#### S3
+1. 
+
+#### Postgres (RDS)
+1. 
 
 #### Elastic Beanstalk
 1. Elastic Beanstalk > create new application > enter a name and hit create
