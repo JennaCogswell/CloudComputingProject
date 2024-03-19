@@ -85,16 +85,21 @@ This application was inspired by similar ones such as *Wattpad.*
 *****************************************************************************************************************
 ### Steps to setup AWS infrastructure:
 
-#### Virtual Private Cloud
-1. 
+#### Virtual Private Cloud - Done
+1. Enable dns hostnames and resolution
+2. Setup two availability zones (AZ)
+3. One private and one public subnet in each AZ
 
 #### S3
 1. 
 
 #### Postgres (RDS)
-1. 
+1. connect to vpc setup
+2. choose postgres
+3. choose free tier options
+4. private access
 
-#### Elastic Beanstalk
+#### Elastic Beanstalk - Had error with setting up load balancer
 1. Elastic Beanstalk > create new application > enter a name and hit create
 2. Configure environment > web server environmnet > leave platform as node.js > application code > upload code
 3. Configure service access > create key-pair
