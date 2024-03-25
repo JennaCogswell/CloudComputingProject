@@ -3,7 +3,7 @@ CSCI 4145 Cloud Computing term project, build a web app and configure the infras
 
 - Author: Jenna Cogswell | [GitHub](https://github.com/JennaCogswell) | [Dalhousie Email](jenna.c@dal.ca) | [Personal Email](cogswejg@gmail.com) | [LinkedIn](https://www.linkedin.com/in/jenna-cogswell-1608771b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKTse20oGQmewcrgqOPIstw%3D%3D) 
 - Start date: 2024-03-13
-- Last modification date: 2024-03-18
+- Last modification date: 2024-03-24
 
 ## Description of the web application
 
@@ -91,7 +91,6 @@ This application was inspired by similar ones such as *Wattpad.*
 3. One private and one public subnet in each AZ
 
 #### S3 - Done
-1. 
 
 #### Postgres (RDS) - Done
 1. connect to vpc setup
@@ -110,7 +109,13 @@ This application was inspired by similar ones such as *Wattpad.*
 
 ******************************************************************************************************************
 ### Frontend component and styling choices:
-- 
+- colours:
+  - text #121212
+  - background #f5f5f5
+  - primary #7d9173
+  - secondary #b6c6ae
+  - accent #f9ae51
+- font: Hubballi
 
 ## Resources
 1. [md syntax](https://www.markdownguide.org/basic-syntax/)
@@ -118,4 +123,7 @@ This application was inspired by similar ones such as *Wattpad.*
 3. [React app and node.js server setup](https://dev.to/techcheck/creating-a-react-node-and-express-app-1ieg)
 4. [Next js app in Elastic Beanstalk](https://hanancs.medium.com/deploy-next-js-app-on-elastic-beanstalk-d4add3fb5453)
 5. [Next auth with email and password](https://www.youtube.com/watch?v=v6TPcU23wP8)
+6. [Tailwind docs](https://tailwindcss.com/docs)
+7. [Real time colors for choosing color and font](https://www.realtimecolors.com/?colors=ededed-100c0c-788c6e-415139-ac6206&fonts=Hubballi-Hubballi)
+
 
