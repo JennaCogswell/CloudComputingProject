@@ -2,13 +2,12 @@
 CSCI 4145 Cloud Computing term project, build a web app and configure the infrastructure through AWS academy.
 
 - Author: Jenna Cogswell | [GitHub](https://github.com/JennaCogswell) | [Dalhousie Email](jenna.c@dal.ca) | [Personal Email](cogswejg@gmail.com) | [LinkedIn](https://www.linkedin.com/in/jenna-cogswell-1608771b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKTse20oGQmewcrgqOPIstw%3D%3D) 
-- Start date: 2024-03-13
-- Last modification date: 2024-03-24
+- Start date: 2024-02-20
+- Last modification date: 2024-03-31
 
 ## Description of the web application
 
-A full-stack web application for users to **create, share, and explore short stories and blog posts,** created by themselves and other users. Deployed in AWS Academy using Elastic Beanstalk. 
-This application was inspired by similar ones such as *Wattpad.* 
+A full-stack web application for users to **create, share, and explore short stories and blog posts,** created by themselves and other users. Deployed in AWS Academy. 
 
 ## Languages used
 - JavaScript (+jsx)
@@ -20,16 +19,15 @@ This application was inspired by similar ones such as *Wattpad.*
 - React.js
 - Node.js
 - Next.js
-- Postgres
 
 ## AWS services used
 
-- Elastic Beanstalk
-    - EC2
-    - Elastic Load Balancing
+- EC2
+- AWS Lambda
 - S3
-- RDS - Postgres
+- RDS - MySQL
 - VPC
+- AWS secrets manager - RDS login
 - (Amazon Polly?)
 
 ****************************************************************************************************
@@ -61,7 +59,7 @@ This application was inspired by similar ones such as *Wattpad.*
 2. Create Git repository and clone locally
 3. Create a project folder
 4. Create a React Next app for the front end (npx create-next-app name)
-5. npm i install next-auth
+5. npm i install next-auth bcrypt
 6. npm run dev
 7. npm run build
 8. Modify package.json to tell Elastic beanstalk how to run the app
@@ -72,7 +70,7 @@ This application was inspired by similar ones such as *Wattpad.*
   "start": "next start -p $PORT"  
 }
 ```
-9. zip the .next folder, package.json, and any public or static folders, to be added to AWS
+9. zip the .next folder, package.json, package-lock.json, and any public or static folders, to be added to AWS
 <!-- steps if using a node server directly without next js:
 1. Create a Node.js server for the backend, with Express.js for API routing 
 1. Install and configure Axios on React app to connect to backend
@@ -82,30 +80,6 @@ This application was inspired by similar ones such as *Wattpad.*
 1. Add build folder path to server constructor
 1. Set up catch for any unknown routes
 1. Now it is all set for production -->
-*****************************************************************************************************************
-### Steps to setup AWS infrastructure:
-
-#### Virtual Private Cloud - Done
-1. Enable dns hostnames and resolution
-2. Setup two availability zones (AZ)
-3. One private and one public subnet in each AZ
-
-#### S3 - Done
-
-#### Postgres (RDS) - Done
-1. connect to vpc setup
-2. choose postgres
-3. choose free tier options
-4. private access
-
-#### Elastic Beanstalk - Done
-1. Elastic Beanstalk > create new application > enter a name and hit create
-2. Configure environment > web server environmnet > leave platform as node.js > application code > upload code
-3. Configure service access > create key-pair
-4. setup VPC configuration and security rules
-5. setup database connection (?)
-6. Add environment variables
-7. leave rest as default > test domain link
 
 ******************************************************************************************************************
 ### Frontend component and styling choices:
@@ -117,13 +91,26 @@ This application was inspired by similar ones such as *Wattpad.*
   - accent #f9ae51
 - font: Hubballi
 
+## Cost
+- 2024-03-25 (Elastic Beanstalk EC2's been runing a few days, next js app first deployed today) $28.5 of $100
+- 2024-03-26 (noon) $31.7 of $100
+- 2024-03-26 (7pm) $33.5
+- 2024-03-28 (noon) $40.7
+- 2024-03-30 evening $51.30
+- 2024-03-31 (after rebuilding) $53.1
+- 2024-04-06 $59.8, $60.1
+
 ## Resources
 1. [md syntax](https://www.markdownguide.org/basic-syntax/)
 2. [git branch naming](https://phoenixnap.com/kb/git-branch-name-convention)
-3. [React app and node.js server setup](https://dev.to/techcheck/creating-a-react-node-and-express-app-1ieg)
-4. [Next js app in Elastic Beanstalk](https://hanancs.medium.com/deploy-next-js-app-on-elastic-beanstalk-d4add3fb5453)
 5. [Next auth with email and password](https://www.youtube.com/watch?v=v6TPcU23wP8)
 6. [Tailwind docs](https://tailwindcss.com/docs)
 7. [Real time colors for choosing color and font](https://www.realtimecolors.com/?colors=ededed-100c0c-788c6e-415139-ac6206&fonts=Hubballi-Hubballi)
+8. [Next js form validation](https://www.geeksforgeeks.org/how-to-add-form-validation-in-next-js/)
+9. [Next js Signin/login/logout example](https://dev.to/vulcanwm/login-and-signup-with-nextjs-am7)
+10. [Next Docs](https://nextjs.org/docs)
+11. [Next Auth Credentials sign up and login](https://www.youtube.com/watch?v=v6TPcU23wP8&t=602s)
+  https://github.com/tomphill/nextauth-tut/blob/main/app/logout.tsx 
+  
 
 

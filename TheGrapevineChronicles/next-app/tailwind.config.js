@@ -17,11 +17,12 @@ module.exports = {
     },
     colors: {
       'transparent': 'transparent',
-      'text': '#121212',
+      'text': 'black',
       'background': '#f5f5f5',
       'primary': '#7d9173',
       'secondary': '#b6c6ae',
       'accent': '#f9ae51',
+      'error': 'red',
      },
      fontSize: {
       sm: '1.00rem',
